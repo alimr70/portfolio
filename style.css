@@ -1,0 +1,393 @@
+/* This version 1.1*/
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                Global Style                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+  --darkBlue: #384259;
+  --red: #f73859;
+  --lightBlue: #7ac7c4;
+  --skyBlue: #e0fff3;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  /* font-size: 10px; */
+  color: var(--black);
+  /* text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); */
+}
+
+
+/*
+WAT IS THIS?!
+We inherit box-sizing: border-box; from our <html> selector
+Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  color: var(--skyBlue);
+}
+
+
+/* ------------------------- Start Of My Custom CSS ------------------------- */
+
+
+/*------------------------- NavBar -------------------------*/
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+#nav {
+  background-color: var(--darkBlue);
+}
+
+#navBar {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#navBar>a {
+  padding: 2em;
+}
+
+.scrolled>a {
+  padding: 1em;
+}
+
+#logo {
+  margin-right: auto;
+}
+
+#menu {
+  display: none;
+}
+
+#closeMenu {
+  display: none;
+}
+
+#menuItems {
+  display: flex;
+}
+
+#menuItems>a {
+  padding: 2em;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 Main Style                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+.gridBodyStyle {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+
+/* ------------------------------- Hero Style ------------------------------- */
+
+.hero {
+  height: 100vh;
+}
+
+.heroBg {
+  background-color: var(--skyBlue);
+}
+
+.heroText {
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.heroText span {
+  color: var(--red);
+}
+
+.heroButton {
+  color: var(--skyBlue);
+  background-color: var(--red);
+  font-weight: lighter;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+
+/* ------------------------- About Me Section Style ------------------------- */
+
+.aboutMeBg {
+  background-color: var(--red);
+}
+
+.aboutMe {
+  flex-direction: column;
+  padding: 6em 0 6em 0;
+}
+
+.myPic {
+  width: 210px;
+  height: 210px;
+  border: 10px solid var(--skyBlue);
+  border-radius: 50%;
+}
+
+.myPic img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.para {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.para span {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+
+/* ------------------------- What I Do Section Style ------------------------ */
+
+.wIDoBg {
+  background-color: var(--darkBlue);
+}
+
+.wIDo {
+  flex-direction: column;
+  padding: 6em 0 6em 0;
+}
+
+.wIDoText {
+  color: var(--skyBlue);
+}
+
+.cardsDiv {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: whitesmoke;
+  max-width: 250px;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.cardImg {
+  width: 100%;
+}
+
+.cardText {
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* ----------------------- Technologies I use Section ----------------------- */
+
+.techBg {
+  background-color: var(--skyBlue);
+}
+
+.tech {
+  flex-direction: column;
+  padding: 6em 0 6em 0;
+}
+
+.techImgss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.techImg {
+  margin: 15px 30px;
+}
+
+.techImg img {
+  width: 100px;
+}
+
+
+/* ---------------------------- Work I Have Done ---------------------------- */
+
+.wIHDBg {
+  background-color: var(--darkBlue);
+}
+
+.wIHDText {
+  color: var(--skyBlue);
+}
+
+.wIHD {
+  flex-direction: column;
+  padding: 6em 0 6em 0;
+}
+
+.cardSitesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardSite {
+  margin: 5px;
+}
+
+.cardSite img {
+  width: 100%;
+}
+
+
+/* ------------------------------- Cntact Form ------------------------------ */
+
+label {
+  border: none;
+}
+
+input,
+textarea {
+  border: none;
+  background-color: var(--skyBlue);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.contactBg {
+  background-color: var(--red);
+}
+
+.contact {
+  flex-direction: column;
+  padding: 6em 0 6em 0;
+}
+
+.contactForm {
+  width: 50%;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm form>* {
+  margin-top: 15px;
+}
+
+#button {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: inherit;
+  padding: 15px 50px;
+  border: none;
+  background-color: var(--skyBlue);
+}
+
+
+/* --------------------------------- Footer --------------------------------- */
+
+.footerBg {
+  background-color: var(--black);
+}
+
+.footer {
+  color: var(--yellow);
+  font-weight: lighter;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
+/* ------------------------------ Media Quiries ----------------------------- */
+
+@media (max-width: 798px) {
+  #menuItems {
+    flex-direction: column;
+    text-align: center;
+  }
+  #menu {
+    display: block;
+  }
+  #closeMenu {
+    display: none;
+  }
+  #menuItems {
+    display: none;
+    width: 100vw;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .heroText {
+    margin-right: unset;
+  }
+  .contactForm {
+    width: 80%;
+  }
+}
